@@ -12,30 +12,35 @@ package dto;
 public class Products {
     
     
-    private String result;
+
+    
     private String description;
     private String title;
-    private float unit_price;
-    private String link;
+    private Double unit_price;
+    private Long link_size;
 
     public Products() {
     }
 
-    public Products(String result) {
-        this.result = result;
+    
+
+    public Products(String description, String title, Double unit_price, Long link_size) {
+        this.description = description;
+        this.title = title;
+        this.unit_price = unit_price;
+        this.link_size = link_size;
+        
         
     }
-    
-    
-    
-    
-    public String getResult() {
-        return result;
+
+    public Long getLink_size() {
+        return link_size;
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    public void setLink_size(Long link_size) {
+        this.link_size = link_size;
     }
+           
 
     public String getDescription() {
         return description;
@@ -53,26 +58,13 @@ public class Products {
         this.title = title;
     }
 
-    public float getUnit_price() {
+    public Double getUnit_price() {
         return unit_price;
     }
 
-    public void setUnit_price(float unit_price) {
+    public void setUnit_price(Double unit_price) {
         this.unit_price = unit_price;
     }
 
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-    }
-    
-    
-    
-
-    
-    
-    
+          
 }

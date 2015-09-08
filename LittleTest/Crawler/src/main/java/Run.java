@@ -1,4 +1,8 @@
 
+
+
+import Exception.BadAnswerExp;
+import Exception.CrawlerException;
 import application.Crawler;
 import java.io.IOException;
 import org.slf4j.Logger;
@@ -10,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * and open the template in the editor.
  */
 /**
- *
+ * main class
  * @author t311372
  */
 public class Run {
@@ -24,9 +28,14 @@ public class Run {
     public static void main(String[] args) throws IOException {
 
         String url = "http://www.sainsburys.co.uk/webapp/wcs/stores/servlet/AjaxApplyFilterBrowseView?langId=44&storeId=10151&catalogId=10122&categoryId=185749&parent_category_rn=12518&top_category=12518&pageSize=20&orderBy=FAVOURITES_FIRST&searchTerm=&beginIndex=0&facet=887";
+//        url = "";
+        try {
+            String parse = Crawler.getInstance().parse(url);
+            LOG.info(parse);
+        } catch (CrawlerException | BadAnswerExp ex) {
+            LOG.error(ex.getMessage());
+        }
 
-        String parse = Crawler.getInstance().parse(url);
-        LOG.info(parse);
     }
 
 }

@@ -13,18 +13,27 @@ import java.util.ArrayList;
  */
 public class ProductLists {
  
-    private ArrayList<Products> ps;
+    private ArrayList<Products> product;
+    private Double totalPrice;
     
     
 
-    public ArrayList<Products> getPs() {
-        return ps;
+    public ArrayList<Products> getProduct() {
+        return product;
     }
 
-    public void setPs(ArrayList<Products> ps) {
-        this.ps = ps;
+    public void setProduct(ArrayList<Products> product) {
+        this.product = product;
+    }
+
+        
+    
+    public Double getTotalPrice() {
+        return totalPrice;
     }
     
-    
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }    
     
 }
